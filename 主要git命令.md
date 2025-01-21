@@ -31,3 +31,15 @@ git diff 【HEAD】：【xxx】可以不写，表示前后两次提交工作区�
 .gitignore文件：里面记录的文件名可以被忽视，修改控制不用被add，commit相应控制，但只适用于.gitignore被添加后被记录的文件，里面可以放隐私文件，编译中间文件等，可以用通配符，
 
 忽略文件夹  temp/
+
+
+
+ssh链接github远程仓库加入的5行，意思是当访问github时使用图片中的rsa密钥
+
+git push, git pull:推送和拉取远程仓库
+
+git remote add <shortname><url>:关联本地和远程仓库； <shortname>是远程仓库别名
+
+git branch -M main ：指定分支的名称为main
+
+git push -u origin main:main :把本地的main分支和远程的origin分支关联起来 -u是-upstream的缩写
