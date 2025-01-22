@@ -36,10 +36,14 @@ git diff 【HEAD】：【xxx】可以不写，表示前后两次提交工作区�
 
 ssh链接github远程仓库加入的5行，意思是当访问github时使用图片中的rsa密钥
 
-git push, git pull:推送和拉取远程仓库
+git push, git pull:推送和拉取远程仓库 git pull默认拉取远程仓库的主分支到本地，后面可加[仓库名] [分支名] 来拉取指定分支，会自动进行一次合并同步，如果不同会冲突，需要手动解决
+
+git fetch也可以拉取远端仓库，不过只会获取修改的内容，而且不会自行同步本地和远端不同的修改，需要手动解决冲突
 
 git remote add <shortname><url>:关联本地和远程仓库； <shortname>是远程仓库别名
 
 git branch -M main ：指定分支的名称为main
 
 git push -u origin main:main :把本地的main分支和远程的origin分支关联起来 -u是-upstream的缩写
+
+git rebase  [branch-name]:把当前分支的修改记录与[branch-name]的共同修改起始节点提交到当前等职末尾修改链表节点提交放到[branch-name]的修改记录链表提交的后面，形成一条修改提交链表，建议个人使用修改的仓库使用
